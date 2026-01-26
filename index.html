@@ -14,15 +14,16 @@
             display: flex;
             justify-content: center;
             align-items: center;
-            text-align: center;
             padding: 20px;
+            text-align: center;
         }
 
         .container {
-            max-width: 450px;
+            max-width: 500px;
         }
 
-        .logo {
+        /* LOGO SECTION */
+        #logoSection {
             animation: fadeIn 1.5s ease-in-out;
         }
 
@@ -35,25 +36,29 @@
             color: #cbd5f5;
         }
 
-        .details {
+        /* INFO SECTION */
+        #infoSection {
             display: none;
-            margin-top: 25px;
             background: #020617;
-            padding: 18px;
-            border-radius: 12px;
+            padding: 25px;
+            border-radius: 15px;
             text-align: left;
-            font-size: 15px;
-            line-height: 1.6;
             animation: slideUp 1s ease-in-out;
         }
 
-        .details h2 {
+        #infoSection h2 {
             text-align: center;
             margin-top: 0;
         }
 
         ul {
             padding-left: 20px;
+            line-height: 1.8;
+        }
+
+        p {
+            font-size: 15px;
+            line-height: 1.6;
         }
 
         @keyframes fadeIn {
@@ -62,7 +67,7 @@
         }
 
         @keyframes slideUp {
-            from { opacity: 0; transform: translateY(20px); }
+            from { opacity: 0; transform: translateY(30px); }
             to { opacity: 1; transform: translateY(0); }
         }
     </style>
@@ -70,8 +75,9 @@
     <script>
         window.onload = function () {
             setTimeout(() => {
-                document.getElementById("details").style.display = "block";
-            }, 2000); // opens after 2 seconds
+                document.getElementById("logoSection").style.display = "none";
+                document.getElementById("infoSection").style.display = "block";
+            }, 3000); // 3 seconds
         };
     </script>
 </head>
@@ -79,8 +85,8 @@
 
 <div class="container">
 
-    <!-- Logo First -->
-    <div class="logo">
+    <!-- LOGO (shows first) -->
+    <div id="logoSection">
         <svg width="220" height="160" viewBox="0 0 200 150">
             <polygon points="100,10 10,140 190,140" fill="#e5e7eb"/>
             <polygon points="100,10 60,140 140,140" fill="#94a3b8"/>
@@ -91,13 +97,13 @@
         <p class="subtitle">Wedding Tent & Event Suppliers</p>
     </div>
 
-    <!-- Opens Automatically -->
-    <div class="details" id="details">
+    <!-- INFO (appears automatically) -->
+    <div id="infoSection">
         <h2>Our Services</h2>
 
         <p>
             <b>Platinum Suppliers</b> is a professional wedding tent and
-            event supplier proudly serving <b>Vijayawada (Royal City)</b>.
+            event supplier proudly serving <b>Vijayawada – The Royal City</b>.
         </p>
 
         <ul>
@@ -106,12 +112,12 @@
             <li>Mandap & Traditional Decor</li>
             <li>Chairs, Sofas & Dining Setup</li>
             <li>Lighting & Electrical Arrangements</li>
-            <li>All Wedding & Event Materials</li>
+            <li>Complete Wedding & Event Materials</li>
         </ul>
 
         <p>
-            We deliver <b>quality, elegance, and royal finishing</b>
-            to make your wedding and events memorable.
+            We provide <b>premium quality tents with royal finishing</b>
+            to make weddings and events grand and memorable.
         </p>
     </div>
 
