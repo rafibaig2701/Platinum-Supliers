@@ -14,79 +14,104 @@
             display: flex;
             justify-content: center;
             align-items: center;
+            text-align: center;
             padding: 20px;
         }
 
         .container {
             max-width: 450px;
-            text-align: center;
+        }
+
+        .logo {
+            animation: fadeIn 1.5s ease-in-out;
         }
 
         h1 {
             letter-spacing: 2px;
-            margin-bottom: 5px;
+            margin: 10px 0 5px;
         }
 
         .subtitle {
             color: #cbd5f5;
-            margin-bottom: 20px;
         }
 
         .details {
+            display: none;
+            margin-top: 25px;
             background: #020617;
             padding: 18px;
             border-radius: 12px;
             text-align: left;
             font-size: 15px;
             line-height: 1.6;
+            animation: slideUp 1s ease-in-out;
         }
 
         .details h2 {
             text-align: center;
             margin-top: 0;
-            margin-bottom: 10px;
-            color: #e5e7eb;
         }
 
         ul {
             padding-left: 20px;
         }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: scale(0.9); }
+            to { opacity: 1; transform: scale(1); }
+        }
+
+        @keyframes slideUp {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
     </style>
+
+    <script>
+        window.onload = function () {
+            setTimeout(() => {
+                document.getElementById("details").style.display = "block";
+            }, 2000); // opens after 2 seconds
+        };
+    </script>
 </head>
 <body>
 
 <div class="container">
 
-    <!-- Tent Logo -->
-    <svg width="220" height="160" viewBox="0 0 200 150">
-        <polygon points="100,10 10,140 190,140" fill="#e5e7eb"/>
-        <polygon points="100,10 60,140 140,140" fill="#94a3b8"/>
-        <line x1="100" y1="10" x2="100" y2="140" stroke="#0f172a" stroke-width="3"/>
-    </svg>
+    <!-- Logo First -->
+    <div class="logo">
+        <svg width="220" height="160" viewBox="0 0 200 150">
+            <polygon points="100,10 10,140 190,140" fill="#e5e7eb"/>
+            <polygon points="100,10 60,140 140,140" fill="#94a3b8"/>
+            <line x1="100" y1="10" x2="100" y2="140" stroke="#0f172a" stroke-width="3"/>
+        </svg>
 
-    <h1>PLATINUM SUPPLIERS</h1>
-    <p class="subtitle">Wedding Tent & Event Suppliers</p>
+        <h1>PLATINUM SUPPLIERS</h1>
+        <p class="subtitle">Wedding Tent & Event Suppliers</p>
+    </div>
 
-    <!-- Services Open Automatically -->
-    <div class="details">
+    <!-- Opens Automatically -->
+    <div class="details" id="details">
         <h2>Our Services</h2>
+
         <p>
-            Platinum Suppliers is a trusted <b>wedding tent and event supplier</b>
-            serving <b>Vijayawada (Royal City)</b>.
+            <b>Platinum Suppliers</b> is a professional wedding tent and
+            event supplier proudly serving <b>Vijayawada (Royal City)</b>.
         </p>
 
         <ul>
             <li>Wedding & Reception Tents</li>
             <li>Royal Wedding Stage Decoration</li>
+            <li>Mandap & Traditional Decor</li>
             <li>Chairs, Sofas & Dining Setup</li>
             <li>Lighting & Electrical Arrangements</li>
-            <li>Mandap & Traditional Decor</li>
-            <li>Outdoor & Indoor Event Setup</li>
+            <li>All Wedding & Event Materials</li>
         </ul>
 
         <p>
-            We provide <b>premium quality tents and wedding materials</b>
-            to make your special occasions grand and memorable.
+            We deliver <b>quality, elegance, and royal finishing</b>
+            to make your wedding and events memorable.
         </p>
     </div>
 
