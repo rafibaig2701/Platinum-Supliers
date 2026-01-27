@@ -1,207 +1,228 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>Platinum Suppliers</title>
+<meta charset="UTF-8">
+<title>Platinum Suppliers | Royal Wedding Tents</title>
 
-    <style>
-        body {
-            margin: 0;
-            min-height: 100vh;
-            background: linear-gradient(135deg, #0f172a, #1e293b);
-            font-family: Arial, sans-serif;
-            color: white;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            padding: 20px;
-        }
+<style>
+html {
+    scroll-behavior: smooth;
+}
 
-        .container {
-            max-width: 700px;
-            width: 100%;
-            text-align: center;
-        }
+body {
+    margin: 0;
+    min-height: 100vh;
+    font-family: "Georgia", serif;
+    background: radial-gradient(circle at top, #1a1a1a, #000);
+    color: #f5f5f5;
+}
 
-        /* LOGO SECTION */
-        #logoSection {
-            animation: fadeIn 1.5s ease-in-out;
-        }
+/* CONTAINER */
+.container {
+    max-width: 900px;
+    margin: auto;
+    padding: 20px;
+}
 
-        h1 {
-            letter-spacing: 2px;
-            margin: 10px 0 5px;
-        }
+/* LOGO */
+#logoSection {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    animation: fadeIn 2s ease-in-out;
+}
 
-        .subtitle {
-            color: #cbd5f5;
-            font-size: 16px;
-        }
+#logoSection h1 {
+    font-size: 36px;
+    letter-spacing: 4px;
+    color: #f7d774;
+    margin: 15px 0 5px;
+}
 
-        /* INFO SECTION */
-        #infoSection {
-            display: none;
-            background: #020617;
-            padding: 32px;
-            border-radius: 18px;
-            animation: slideUp 1s ease-in-out;
-            text-align: left;
-        }
+.subtitle {
+    font-size: 18px;
+    color: #e6c76e;
+}
 
-        #infoSection h2 {
-            text-align: center;
-            margin-top: 0;
-            font-size: 28px;
-        }
+/* INFO SECTION */
+#infoSection {
+    display: none;
+    background: linear-gradient(180deg, #0b0b0b, #141414);
+    border-radius: 20px;
+    padding: 40px;
+    margin-bottom: 50px;
+    animation: slideUp 1.2s ease;
+}
 
-        #infoSection p {
-            font-size: 18px;
-            line-height: 1.9;
-            margin-top: 18px;
-        }
+#infoSection h2 {
+    text-align: center;
+    font-size: 32px;
+    color: #f7d774;
+    margin-bottom: 20px;
+}
 
-        /* PHOTOS */
-        .photos {
-            margin-top: 25px;
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-            gap: 14px;
-        }
+#infoSection p {
+    font-size: 19px;
+    line-height: 2;
+    margin-bottom: 18px;
+    color: #f3e7b5;
+}
 
-        .photos img {
-            width: 100%;
-            height: 170px;
-            object-fit: cover;
-            border-radius: 12px;
-        }
+/* PHOTO GALLERY */
+.photos {
+    margin-top: 35px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 16px;
+}
 
-        /* CONTACT */
-        .contact {
-            margin-top: 30px;
-            background: #0f172a;
-            padding: 20px;
-            border-radius: 14px;
-        }
+.photos img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 14px;
+    border: 2px solid #f7d774;
+    box-shadow: 0 0 20px rgba(247,215,116,0.25);
+}
 
-        .contact h3 {
-            margin-top: 0;
-            text-align: center;
-        }
+/* CONTACT */
+.contact {
+    margin-top: 40px;
+    background: #0f0f0f;
+    padding: 25px;
+    border-radius: 16px;
+    border: 1px solid #f7d774;
+}
 
-        .contact a {
-            color: #38bdf8;
-            text-decoration: none;
-            font-weight: bold;
-        }
+.contact h3 {
+    text-align: center;
+    color: #f7d774;
+    margin-top: 0;
+}
 
-        .parent {
-            margin-top: 25px;
-            font-size: 16px;
-            background: #020617;
-            padding: 18px;
-            border-radius: 12px;
-        }
+.contact a {
+    color: #f7d774;
+    text-decoration: none;
+    font-weight: bold;
+}
 
-        @keyframes fadeIn {
-            from { opacity: 0; transform: scale(0.9); }
-            to { opacity: 1; transform: scale(1); }
-        }
+/* PARENT */
+.parent {
+    margin-top: 30px;
+    padding: 22px;
+    border-radius: 14px;
+    background: #050505;
+    border-left: 5px solid #f7d774;
+    color: #e8dca4;
+}
 
-        @keyframes slideUp {
-            from { opacity: 0; transform: translateY(30px); }
-            to { opacity: 1; transform: translateY(0); }
-        }
-    </style>
+/* ANIMATIONS */
+@keyframes fadeIn {
+    from {opacity:0; transform:scale(0.9);}
+    to {opacity:1; transform:scale(1);}
+}
 
-    <script>
-        window.onload = function () {
-            setTimeout(() => {
-                document.getElementById("logoSection").style.display = "none";
-                document.getElementById("infoSection").style.display = "block";
-            }, 3000);
-        };
-    </script>
+@keyframes slideUp {
+    from {opacity:0; transform:translateY(40px);}
+    to {opacity:1; transform:translateY(0);}
+}
+</style>
+
+<script>
+window.onload = function () {
+    setTimeout(() => {
+        document.getElementById("logoSection").style.display = "none";
+        document.getElementById("infoSection").style.display = "block";
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+    }, 3000);
+};
+</script>
 </head>
+
 <body>
 
 <div class="container">
 
-    <!-- LOGO -->
-    <div id="logoSection" style="text-align:center;">
-        <svg width="220" height="160" viewBox="0 0 200 150">
-            <polygon points="100,10 10,140 190,140" fill="#e5e7eb"/>
-            <polygon points="100,10 60,140 140,140" fill="#94a3b8"/>
-            <line x1="100" y1="10" x2="100" y2="140" stroke="#0f172a" stroke-width="3"/>
-        </svg>
+<!-- LOGO SCREEN -->
+<div id="logoSection">
+    <svg width="240" height="170" viewBox="0 0 200 150">
+        <polygon points="100,10 10,140 190,140" fill="#f7d774"/>
+        <polygon points="100,10 60,140 140,140" fill="#d6b85c"/>
+        <line x1="100" y1="10" x2="100" y2="140" stroke="#000" stroke-width="3"/>
+    </svg>
 
-        <h1>PLATINUM SUPPLIERS</h1>
-        <p class="subtitle">Wedding Tent & Event Suppliers</p>
-    </div>
+    <h1>PLATINUM SUPPLIERS</h1>
+    <p class="subtitle">Royal Wedding Tent Specialists</p>
+</div>
 
-    <!-- INFO -->
-    <div id="infoSection">
+<!-- MAIN CONTENT -->
+<div id="infoSection">
 
-        <h2>About Our Services</h2>
+<h2>Royal Wedding Tent Services</h2>
 
-        <p>
-            <b>Platinum Suppliers</b> is a professional wedding tent and event
-            supplier proudly serving <b>Vijayawada – The Royal City</b>.
-            We provide premium-quality wedding tents and complete event setup
-            solutions designed to create elegant, comfortable, and memorable
-            celebrations.
-        </p>
+<p>
+<b>Platinum Suppliers</b> is a premium wedding tent and event setup service
+based in <b>Vijayawada – The Royal City</b>. We specialize in creating
+luxurious, grand, and elegant wedding environments that reflect tradition,
+royalty, and celebration.
+</p>
 
-        <p>
-            Our services include wedding and reception tents, royal stage setups,
-            mandap arrangements, chairs, sofas, and dining setups. Each event is
-            handled with great care, precision, and commitment to quality.
-        </p>
+<p>
+Our royal tent setups are designed with spacious layouts, strong structures,
+and majestic finishes suitable for weddings, receptions, engagements, and
+large ceremonial gatherings. Every arrangement is planned to offer comfort,
+beauty, and a regal visual experience.
+</p>
 
-        <p>
-            With years of experience and customer trust, we ensure timely service,
-            clean setups, and a professional finish for every occasion.
-        </p>
+<p>
+With a deep-rooted legacy in event services, we ensure disciplined execution,
+timely setup, and professional coordination. From intimate ceremonies to grand
+wedding celebrations, our tents enhance the atmosphere with grace and dignity.
+</p>
 
-        <!-- PHOTOS -->
-        <div class="photos">
-            <img src="01cfc00d-b5e0-49e5-939f-e8a76b7fd9f7.jpeg" alt="Wedding Tent">
-            <img src="IMG_0025.jpeg" alt="Wedding Setup">
-            <img src="61850267-a76b-4314-b5d1-1eab7cd59602.jpeg" alt="Reception Tent">
-            <img src="03734B80-C0C3-4007-A461-B55B2ECA9BB6.jpeg" alt="Wedding Stage">
-        </div>
+<!-- PHOTOS -->
+<div class="photos">
+    <img src="01cfc00d-b5e0-49e5-939f-e8a76b7fd9f7.jpeg">
+    <img src="IMG_0025.jpeg">
+    <img src="61850267-a76b-4314-b5d1-1eab7cd59602.jpeg">
+    <img src="03734B80-C0C3-4007-A461-B55B2ECA9BB6.jpeg">
+    <img src="e5611b77-e20d-4967-9740-cca32449422f.jpeg">
+    <img src="343c6d5e-c4e0-49bc-be50-bff6837e4659.jpeg">
+    <img src="cfd15f3a-0bb3-485c-883e-94dc31cdf4fd.jpeg">
+</div>
 
-        <!-- CONTACT -->
-        <div class="contact">
-            <h3>Contact Us</h3>
-            <p>
-                📍 <b>Address:</b><br>
-                17-24-30, Manchalavari St,<br>
-                Pezzonipet, Vijayawada,<br>
-                Andhra Pradesh – 520003
-            </p>
+<!-- CONTACT -->
+<div class="contact">
+<h3>Contact Details</h3>
+<p>
+📍 17-24-30, Manchalavari St,<br>
+Pezzonipet, Vijayawada,<br>
+Andhra Pradesh – 520003
+</p>
 
-            <p>
-                📞 <b>Phone:</b><br>
-                <a href="tel:+919569933366">+91 95699 33366</a>
-            </p>
-        </div>
+<p>
+📞 <a href="tel:+919569933366">+91 95699 33366</a>
+</p>
+</div>
 
-        <!-- PARENT SUPPLIER -->
-        <div class="parent">
-            <p>
-                <b>Parent Supplier:</b><br>
-                KARIMULLA TENT HOUSE SUPPLIERS AND CATERING<br>
-                <b>Since 1984</b>
-            </p>
-            <p>
-                🔗 <a href="https://share.google/qziAj7Y1oBh7B1pee" target="_blank">
-                View on Google
-                </a>
-            </p>
-        </div>
+<!-- PARENT -->
+<div class="parent">
+<p>
+<b>Parent Supplier</b><br>
+KARIMULLA TENT HOUSE SUPPLIERS AND CATERING<br>
+<b>Since 1984</b>
+</p>
 
-    </div>
+<p>
+🔗 <a href="https://share.google/qziAj7Y1oBh7B1pee" target="_blank">
+View on Google
+</a>
+</p>
+</div>
 
+</div>
 </div>
 
 </body>
