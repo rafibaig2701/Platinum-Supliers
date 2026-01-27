@@ -15,11 +15,12 @@
             justify-content: center;
             align-items: center;
             padding: 20px;
-            text-align: center;
         }
 
         .container {
-            max-width: 500px;
+            max-width: 650px;
+            width: 100%;
+            text-align: center;
         }
 
         /* LOGO SECTION */
@@ -34,31 +35,44 @@
 
         .subtitle {
             color: #cbd5f5;
+            font-size: 16px;
         }
 
         /* INFO SECTION */
         #infoSection {
             display: none;
             background: #020617;
-            padding: 25px;
-            border-radius: 15px;
-            text-align: left;
+            padding: 30px;
+            border-radius: 16px;
             animation: slideUp 1s ease-in-out;
         }
 
         #infoSection h2 {
             text-align: center;
             margin-top: 0;
+            font-size: 28px;
         }
 
-        ul {
-            padding-left: 20px;
-            line-height: 1.8;
+        #infoSection p {
+            font-size: 18px;
+            line-height: 1.9;
+            margin-top: 18px;
+            text-align: left;
         }
 
-        p {
-            font-size: 15px;
-            line-height: 1.6;
+        /* PHOTOS */
+        .photos {
+            margin-top: 25px;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+            gap: 14px;
+        }
+
+        .photos img {
+            width: 100%;
+            height: 160px;
+            object-fit: cover;
+            border-radius: 12px;
         }
 
         @keyframes fadeIn {
@@ -77,7 +91,7 @@
             setTimeout(() => {
                 document.getElementById("logoSection").style.display = "none";
                 document.getElementById("infoSection").style.display = "block";
-            }, 3000); // 3 seconds
+            }, 3000);
         };
     </script>
 </head>
@@ -85,7 +99,7 @@
 
 <div class="container">
 
-    <!-- LOGO (shows first) -->
+    <!-- LOGO (SHOWS FIRST) -->
     <div id="logoSection">
         <svg width="220" height="160" viewBox="0 0 200 150">
             <polygon points="100,10 10,140 190,140" fill="#e5e7eb"/>
@@ -97,28 +111,39 @@
         <p class="subtitle">Wedding Tent & Event Suppliers</p>
     </div>
 
-    <!-- INFO (appears automatically) -->
+    <!-- INFO + PHOTOS (SHOW AFTER LOGO) -->
     <div id="infoSection">
-        <h2>Our Services</h2>
+        <h2>About Our Services</h2>
 
         <p>
-            <b>Platinum Suppliers</b> is a professional wedding tent and
-            event supplier proudly serving <b>Vijayawada – The Royal City</b>.
+            <b>Platinum Suppliers</b> is a trusted and professional wedding tent
+            and event supplier based in <b>Vijayawada – The Royal City</b>.
+            We specialize in providing premium-quality wedding tents and complete
+            event setup solutions that bring elegance, comfort, and a royal
+            atmosphere to your special occasions.
         </p>
-
-        <ul>
-            <li>Wedding & Reception Tents</li>
-            <li>Royal Wedding Stage Decoration</li>
-            <li>Mandap & Traditional Decor</li>
-            <li>Chairs, Sofas & Dining Setup</li>
-            <li>Lighting & Electrical Arrangements</li>
-            <li>Complete Wedding & Event Materials</li>
-        </ul>
 
         <p>
-            We provide <b>premium quality tents with royal finishing</b>
-            to make weddings and events grand and memorable.
+            Our services include beautifully designed wedding and reception tents,
+            royal stage setups, mandap arrangements, chairs, sofas, and dining
+            setups. Each arrangement is carefully planned and executed to match
+            the grandeur of your celebration and ensure a memorable experience
+            for you and your guests.
         </p>
+
+        <p>
+            With a strong commitment to quality, cleanliness, and timely service,
+            Platinum Suppliers has earned the trust of customers across Vijayawada
+            and nearby areas for weddings and important events.
+        </p>
+
+        <!-- PHOTO GALLERY -->
+        <div class="photos">
+            <img src="01cfc00d-b5e0-49e5-939f-e8a76b7fd9f7.jpeg" alt="Wedding Tent">
+            <img src="IMG_0025.jpeg" alt="Wedding Setup">
+            <img src="61850267-a76b-4314-b5d1-1eab7cd59602.jpeg" alt="Reception Tent">
+            <img src="03734B80-C0C3-4007-A461-B55B2ECA9BB6.jpeg" alt="Wedding Stage">
+        </div>
     </div>
 
 </div>
