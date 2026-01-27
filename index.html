@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<title>Platinum Suppliers | Wedding Tent Services</title>
+<title>Platinum Suppliers</title>
 
 <style>
 html {
@@ -23,18 +23,21 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background: #ffffff;
+    background: #0a1e3f; /* royal blue background */
+    color: white;
+    animation: fadeOut 1s ease-in-out forwards;
+    animation-delay: 3s;
 }
 
 #logoSection h1 {
-    font-size: 34px;
     margin-top: 15px;
-    color: #2b2b2b;
+    letter-spacing: 2px;
+    font-size: 32px;
 }
 
 #logoSection p {
-    color: #666;
     font-size: 16px;
+    opacity: 0.9;
 }
 
 /* MAIN CONTENT */
@@ -46,26 +49,21 @@ body {
     background: #ffffff;
 }
 
-/* HEADINGS */
 h2 {
     margin-top: 40px;
-    color: #2c2c2c;
 }
 
-/* TEXT */
 p {
     font-size: 18px;
     line-height: 1.9;
-    margin-bottom: 20px;
-    color: #333;
 }
 
-/* IMAGES */
+/* GALLERY */
 .gallery {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
     gap: 15px;
-    margin-top: 30px;
+    margin-top: 25px;
 }
 
 .gallery img {
@@ -77,14 +75,10 @@ p {
 
 /* CONTACT */
 .contact {
-    margin-top: 50px;
-    padding: 25px;
     background: #f0f0f0;
+    padding: 25px;
+    margin-top: 40px;
     border-radius: 8px;
-}
-
-.contact h3 {
-    margin-top: 0;
 }
 
 /* FOOTER */
@@ -92,7 +86,11 @@ p {
     margin-top: 40px;
     padding: 20px;
     background: #e9e9e9;
-    border-left: 4px solid #999;
+}
+
+/* ANIMATIONS */
+@keyframes fadeOut {
+    to { opacity: 0; visibility: hidden; }
 }
 </style>
 
@@ -111,42 +109,43 @@ window.onload = function () {
 
 <!-- LOGO SCREEN -->
 <div id="logoSection">
-    <svg width="220" height="150" viewBox="0 0 200 150">
-        <polygon points="100,10 10,140 190,140" fill="#888"/>
-        <line x1="100" y1="10" x2="100" y2="140" stroke="#444" stroke-width="3"/>
+
+    <!-- PAKODA TENT LOGO -->
+    <svg width="260" height="180" viewBox="0 0 260 180">
+        <!-- roof -->
+        <polygon points="130,10 10,150 250,150" fill="white"/>
+        <!-- scallop edge -->
+        <path d="M20 150 Q40 160 60 150 Q80 160 100 150 Q120 160 140 150 Q160 160 180 150 Q200 160 220 150"
+              fill="white"/>
+        <!-- poles -->
+        <line x1="40" y1="150" x2="40" y2="175" stroke="white" stroke-width="4"/>
+        <line x1="220" y1="150" x2="220" y2="175" stroke="white" stroke-width="4"/>
     </svg>
+
     <h1>PLATINUM SUPPLIERS</h1>
-    <p>Wedding Tent & Event Setup Services</p>
+    <p>Wedding Tent & Event Suppliers</p>
 </div>
 
-<!-- MAIN PAGE -->
+<!-- MAIN CONTENT -->
 <div id="content">
 
 <h2>About Platinum Suppliers</h2>
 
 <p>
-Platinum Suppliers is a professional wedding tent and event setup service
-provider located in Vijayawada. We focus on delivering well-structured,
-comfortable, and visually pleasing tent arrangements for weddings and
-traditional functions.
+Platinum Suppliers is a professional wedding tent and event setup service provider
+based in Vijayawada. We focus on providing strong, clean, and well-organized tent
+structures suitable for weddings and traditional ceremonies.
 </p>
 
 <p>
-Our experience in handling wedding events allows us to understand space,
-crowd flow, and ceremonial requirements. Each setup is planned carefully
-to ensure safety, comfort, and a neat appearance throughout the event.
+Our experience helps us understand the importance of proper layout, guest comfort,
+and timely execution. Every setup is planned with attention to space, safety, and
+presentation.
 </p>
 
 <p>
-We cater to various wedding-related occasions such as engagements, receptions,
-naming ceremonies, and large family gatherings. Our tents are designed to
-withstand weather conditions while maintaining a clean and organized look.
-</p>
-
-<p>
-Being based in Vijayawada, we serve the city and surrounding areas with
-reliable service, timely execution, and proper coordination with clients
-and event planners.
+We serve weddings, receptions, engagements, and large family events across
+Vijayawada and nearby areas with reliability and dedication.
 </p>
 
 <h2>Our Work Gallery</h2>
@@ -161,26 +160,11 @@ and event planners.
     <img src="cfd15f3a-0bb3-485c-883e-94dc31cdf4fd.jpeg">
 </div>
 
-<h2>Why Choose Us</h2>
-
-<p>
-We follow a disciplined approach to event setup, ensuring everything is
-arranged well before time. Our team values quality, stability, and cleanliness
-in every project we handle.
-</p>
-
-<p>
-Our background in traditional tent services helps us understand the cultural
-importance of weddings and family functions. This experience reflects in the
-way we execute every assignment.
-</p>
-
 <div class="contact">
-<h3>Contact Information</h3>
+<h3>Contact</h3>
 <p>
 📍 17-24-30, Manchalavari St,<br>
-Pezzonipet, Vijayawada,<br>
-Andhra Pradesh – 520003
+Pezzonipet, Vijayawada – 520003
 </p>
 <p>
 📞 <a href="tel:+919569933366">+91 95699 33366</a>
@@ -191,13 +175,10 @@ Andhra Pradesh – 520003
 <p>
 <b>Parent Supplier:</b><br>
 KARIMULLA TENT HOUSE SUPPLIERS AND CATERING<br>
-Serving since 1984
+Serving Since 1984
 </p>
-
 <p>
-🔗 <a href="https://share.google/qziAj7Y1oBh7B1pee" target="_blank">
-View on Google
-</a>
+<a href="https://share.google/qziAj7Y1oBh7B1pee" target="_blank">View on Google</a>
 </p>
 </div>
 
