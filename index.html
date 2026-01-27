@@ -18,7 +18,7 @@
         }
 
         .container {
-            max-width: 650px;
+            max-width: 700px;
             width: 100%;
             text-align: center;
         }
@@ -42,9 +42,10 @@
         #infoSection {
             display: none;
             background: #020617;
-            padding: 30px;
-            border-radius: 16px;
+            padding: 32px;
+            border-radius: 18px;
             animation: slideUp 1s ease-in-out;
+            text-align: left;
         }
 
         #infoSection h2 {
@@ -57,21 +58,47 @@
             font-size: 18px;
             line-height: 1.9;
             margin-top: 18px;
-            text-align: left;
         }
 
         /* PHOTOS */
         .photos {
             margin-top: 25px;
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
             gap: 14px;
         }
 
         .photos img {
             width: 100%;
-            height: 160px;
+            height: 170px;
             object-fit: cover;
+            border-radius: 12px;
+        }
+
+        /* CONTACT */
+        .contact {
+            margin-top: 30px;
+            background: #0f172a;
+            padding: 20px;
+            border-radius: 14px;
+        }
+
+        .contact h3 {
+            margin-top: 0;
+            text-align: center;
+        }
+
+        .contact a {
+            color: #38bdf8;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .parent {
+            margin-top: 25px;
+            font-size: 16px;
+            background: #020617;
+            padding: 18px;
             border-radius: 12px;
         }
 
@@ -99,8 +126,8 @@
 
 <div class="container">
 
-    <!-- LOGO (SHOWS FIRST) -->
-    <div id="logoSection">
+    <!-- LOGO -->
+    <div id="logoSection" style="text-align:center;">
         <svg width="220" height="160" viewBox="0 0 200 150">
             <polygon points="100,10 10,140 190,140" fill="#e5e7eb"/>
             <polygon points="100,10 60,140 140,140" fill="#94a3b8"/>
@@ -111,39 +138,68 @@
         <p class="subtitle">Wedding Tent & Event Suppliers</p>
     </div>
 
-    <!-- INFO + PHOTOS (SHOW AFTER LOGO) -->
+    <!-- INFO -->
     <div id="infoSection">
+
         <h2>About Our Services</h2>
 
         <p>
-            <b>Platinum Suppliers</b> is a trusted and professional wedding tent
-            and event supplier based in <b>Vijayawada – The Royal City</b>.
-            We specialize in providing premium-quality wedding tents and complete
-            event setup solutions that bring elegance, comfort, and a royal
-            atmosphere to your special occasions.
+            <b>Platinum Suppliers</b> is a professional wedding tent and event
+            supplier proudly serving <b>Vijayawada – The Royal City</b>.
+            We provide premium-quality wedding tents and complete event setup
+            solutions designed to create elegant, comfortable, and memorable
+            celebrations.
         </p>
 
         <p>
-            Our services include beautifully designed wedding and reception tents,
-            royal stage setups, mandap arrangements, chairs, sofas, and dining
-            setups. Each arrangement is carefully planned and executed to match
-            the grandeur of your celebration and ensure a memorable experience
-            for you and your guests.
+            Our services include wedding and reception tents, royal stage setups,
+            mandap arrangements, chairs, sofas, and dining setups. Each event is
+            handled with great care, precision, and commitment to quality.
         </p>
 
         <p>
-            With a strong commitment to quality, cleanliness, and timely service,
-            Platinum Suppliers has earned the trust of customers across Vijayawada
-            and nearby areas for weddings and important events.
+            With years of experience and customer trust, we ensure timely service,
+            clean setups, and a professional finish for every occasion.
         </p>
 
-        <!-- PHOTO GALLERY -->
+        <!-- PHOTOS -->
         <div class="photos">
             <img src="01cfc00d-b5e0-49e5-939f-e8a76b7fd9f7.jpeg" alt="Wedding Tent">
             <img src="IMG_0025.jpeg" alt="Wedding Setup">
             <img src="61850267-a76b-4314-b5d1-1eab7cd59602.jpeg" alt="Reception Tent">
             <img src="03734B80-C0C3-4007-A461-B55B2ECA9BB6.jpeg" alt="Wedding Stage">
         </div>
+
+        <!-- CONTACT -->
+        <div class="contact">
+            <h3>Contact Us</h3>
+            <p>
+                📍 <b>Address:</b><br>
+                17-24-30, Manchalavari St,<br>
+                Pezzonipet, Vijayawada,<br>
+                Andhra Pradesh – 520003
+            </p>
+
+            <p>
+                📞 <b>Phone:</b><br>
+                <a href="tel:+919569933366">+91 95699 33366</a>
+            </p>
+        </div>
+
+        <!-- PARENT SUPPLIER -->
+        <div class="parent">
+            <p>
+                <b>Parent Supplier:</b><br>
+                KARIMULLA TENT HOUSE SUPPLIERS AND CATERING<br>
+                <b>Since 1984</b>
+            </p>
+            <p>
+                🔗 <a href="https://share.google/qziAj7Y1oBh7B1pee" target="_blank">
+                View on Google
+                </a>
+            </p>
+        </div>
+
     </div>
 
 </div>
