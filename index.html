@@ -5,7 +5,6 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Platinum Suppliers</title>
 
-<!-- GOOGLE FONTS -->
 <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@400;700&family=Inter:wght@400;500&display=swap" rel="stylesheet">
 
 <style>
@@ -44,7 +43,7 @@ body {
     text-align: center;
 }
 
-/* LOGO TEXT (DIFFERENT FROM PAGE) */
+/* LOGO TEXT */
 .logo-text h1 {
     font-family: "Inter", sans-serif;
     font-size: 26px;
@@ -63,7 +62,7 @@ body {
 
 /* MAIN CONTENT */
 #content {
-    max-width: 760px;              /* newspaper width */
+    max-width: 760px;
     margin: auto;
     padding: 120px 20px;
 }
@@ -87,17 +86,27 @@ body {
     color: #d1d5db;
 }
 
-/* GALLERY */
+/* IMAGE GALLERY */
 .gallery {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-    gap: 18px;
+    gap: 22px;
     margin-top: 30px;
+}
+
+.gallery .frame {
+    border: 1px solid rgba(255,255,255,0.25);
+    padding: 8px;
+    border-radius: 12px;
+    background: rgba(255,255,255,0.03);
 }
 
 .gallery img {
     width: 100%;
-    border-radius: 10px;
+    height: 220px;                /* EQUAL SIZE */
+    object-fit: cover;            /* NEAT CROP */
+    border-radius: 8px;
+    display: block;
 }
 
 /* FOOTER */
@@ -111,14 +120,14 @@ footer {
     color: #cbd5e1;
 }
 
-/* SPARKLE ANIMATION */
+/* SPARKLE */
 @keyframes sparkle {
-    0% { transform: translateX(-60px); opacity: 0; }
-    30% { opacity: 0.8; }
-    100% { transform: translateX(60px); opacity: 0; }
+    0% { opacity: 0; }
+    40% { opacity: 0.7; }
+    100% { opacity: 0; }
 }
 .sparkle {
-    animation: sparkle 2.5s infinite;
+    animation: sparkle 3s infinite;
 }
 </style>
 </head>
@@ -129,16 +138,29 @@ footer {
 <div id="logoSection">
     <div class="logo-wrapper">
 
-        <!-- DIAMOND TENT LOGO -->
-        <svg width="220" height="160" viewBox="0 0 420 260">
-            <polygon points="210,30 80,170 210,220 340,170" fill="#e5e7eb"/>
-            <polygon points="210,55 115,170 210,200 305,170" fill="#0a1e3f"/>
+        <!-- PREMIUM TENT LOGO (CORRECT SYMBOL) -->
+        <svg width="220" height="150" viewBox="0 0 420 260">
 
-            <!-- Sparkle line -->
-            <line x1="160" y1="90" x2="260" y2="170"
+            <!-- Tent roof -->
+            <polygon points="210,30 60,180 360,180"
+                     fill="#e5e7eb"/>
+
+            <!-- Inner roof cut -->
+            <polygon points="210,55 110,180 310,180"
+                     fill="#0a1e3f"/>
+
+            <!-- Sparkle highlight -->
+            <line x1="210" y1="55" x2="260" y2="180"
                   stroke="rgba(255,255,255,0.7)"
                   stroke-width="2"
                   class="sparkle"/>
+
+            <!-- Poles -->
+            <line x1="110" y1="180" x2="110" y2="230"
+                  stroke="#e5e7eb" stroke-width="5"/>
+            <line x1="310" y1="180" x2="310" y2="230"
+                  stroke="#e5e7eb" stroke-width="5"/>
+
         </svg>
 
         <div class="logo-text">
@@ -156,15 +178,14 @@ footer {
         <h2>About Us</h2>
         <p>
             Platinum Suppliers is a refined wedding tent and event setup service,
-            serving Vijayawada with discretion, craftsmanship, and enduring reliability.
+            serving Vijayawada with craftsmanship, reliability, and restraint.
             The brand operates under the legacy of
             <strong>KARIMULLA TENT HOUSE SUPPLIERS AND CATERING</strong>,
             established in 1984.
         </p>
         <p>
-            Our work reflects balance and structural integrity, paired with a restrained
-            sense of luxury. Each installation is designed to complement the occasion,
-            never overpower it.
+            Our installations emphasize structural integrity, balance,
+            and a quiet sense of premium presentation.
         </p>
     </div>
 
@@ -172,18 +193,17 @@ footer {
         <h2>Our Tent Setup</h2>
         <p>
             We design and construct durable, weather-resistant tent structures
-            for weddings, receptions, and large ceremonial gatherings.
-            Every setup is executed with precise alignment, premium materials,
-            and disciplined attention to detail.
+            for weddings and large ceremonial events,
+            executed with precision and disciplined attention to detail.
         </p>
 
         <div class="gallery">
-            <img src="01cfc00d-b5e0-49e5-939f-e8a76b7fd9f7.jpeg">
-            <img src="IMG_0025.jpeg">
-            <img src="61850267-a76b-4314-b5d1-1eab7cd59602.jpeg">
-            <img src="03734B80-C0C3-4007-A461-B55B2ECA9BB6.jpeg">
-            <img src="343c6d5e-c4e0-49bc-be50-bff6837e4659.jpeg">
-            <img src="cfd15f3a-0bb3-485c-883e-94dc31cdf4fd.jpeg">
+            <div class="frame"><img src="01cfc00d-b5e0-49e5-939f-e8a76b7fd9f7.jpeg"></div>
+            <div class="frame"><img src="IMG_0025.jpeg"></div>
+            <div class="frame"><img src="61850267-a76b-4314-b5d1-1eab7cd59602.jpeg"></div>
+            <div class="frame"><img src="03734B80-C0C3-4007-A461-B55B2ECA9BB6.jpeg"></div>
+            <div class="frame"><img src="343c6d5e-c4e0-49bc-be50-bff6837e4659.jpeg"></div>
+            <div class="frame"><img src="cfd15f3a-0bb3-485c-883e-94dc31cdf4fd.jpeg"></div>
         </div>
     </div>
 
