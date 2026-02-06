@@ -1,9 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Platinum Suppliers</title>
+
+<!-- GOOGLE FONTS -->
+<link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@400;700&family=Inter:wght@400;500&display=swap" rel="stylesheet">
 
 <style>
 /* RESET */
@@ -11,13 +14,13 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: "Poppins", sans-serif;
 }
 
+/* BASE */
 body {
     background: #0a1e3f;
     color: #e5e7eb;
-    overflow-x: hidden;
+    font-family: "Libre Baskerville", serif;
 }
 
 /* LOGO SCREEN */
@@ -29,12 +32,11 @@ body {
     justify-content: center;
     align-items: center;
     z-index: 1000;
-    transition: opacity 1s ease, transform 1s ease;
+    transition: opacity 1s ease;
 }
 
 #logoSection.hide {
     opacity: 0;
-    transform: scale(1.05);
     pointer-events: none;
 }
 
@@ -42,105 +44,103 @@ body {
     text-align: center;
 }
 
-/* PREMIUM TEXT */
+/* LOGO TEXT (DIFFERENT FROM PAGE) */
 .logo-text h1 {
-    font-size: 30px;
+    font-family: "Inter", sans-serif;
+    font-size: 26px;
+    letter-spacing: 6px;
     font-weight: 500;
-    letter-spacing: 4px;
-    margin-top: 16px;
-    color: #f1f5f9;
+    margin-top: 14px;
 }
 
 .logo-text p {
-    font-size: 14px;
-    letter-spacing: 2px;
+    font-family: "Inter", sans-serif;
+    font-size: 12px;
+    letter-spacing: 3px;
     margin-top: 6px;
     color: #cbd5e1;
 }
 
 /* MAIN CONTENT */
 #content {
-    padding: 90px 20px;
-    max-width: 1050px;
+    max-width: 760px;              /* newspaper width */
     margin: auto;
+    padding: 120px 20px;
 }
 
+/* SECTIONS */
 .section {
     margin-bottom: 70px;
 }
 
 .section h2 {
     font-size: 26px;
-    margin-bottom: 18px;
-    font-weight: 500;
-    letter-spacing: 1px;
+    font-weight: 700;
+    margin-bottom: 20px;
     color: #f8fafc;
 }
 
 .section p {
     font-size: 17px;
     line-height: 1.9;
+    margin-bottom: 18px;
     color: #d1d5db;
-    max-width: 850px;
 }
 
-/* IMAGE GALLERY */
+/* GALLERY */
 .gallery {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-    gap: 22px;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 18px;
     margin-top: 30px;
 }
 
 .gallery img {
     width: 100%;
-    border-radius: 14px;
-    object-fit: cover;
+    border-radius: 10px;
 }
 
 /* FOOTER */
 footer {
-    margin-top: 90px;
-    padding: 35px 20px;
     border-top: 1px solid rgba(255,255,255,0.15);
+    padding: 30px 20px;
     text-align: center;
-    font-size: 15px;
+    font-family: "Inter", sans-serif;
+    font-size: 13px;
     letter-spacing: 0.5px;
     color: #cbd5e1;
+}
+
+/* SPARKLE ANIMATION */
+@keyframes sparkle {
+    0% { transform: translateX(-60px); opacity: 0; }
+    30% { opacity: 0.8; }
+    100% { transform: translateX(60px); opacity: 0; }
+}
+.sparkle {
+    animation: sparkle 2.5s infinite;
 }
 </style>
 </head>
 
 <body>
 
-<!-- LOGO SCREEN -->
+<!-- LOGO -->
 <div id="logoSection">
     <div class="logo-wrapper">
 
-        <!-- DIAMOND-STYLE TENT LOGO -->
-        <svg width="300" height="190" viewBox="0 0 420 260">
+        <!-- DIAMOND TENT LOGO -->
+        <svg width="220" height="160" viewBox="0 0 420 260">
+            <polygon points="210,30 80,170 210,220 340,170" fill="#e5e7eb"/>
+            <polygon points="210,55 115,170 210,200 305,170" fill="#0a1e3f"/>
 
-            <!-- Outer diamond roof -->
-            <polygon points="210,20 50,185 210,235 370,185"
-                     fill="#e5e7eb"/>
-
-            <!-- Inner cut -->
-            <polygon points="210,45 95,185 210,215 325,185"
-                     fill="#0a1e3f"/>
-
-            <!-- Diamond shine -->
-            <line x1="210" y1="45" x2="260" y2="185"
-                  stroke="rgba(255,255,255,0.6)" stroke-width="2"/>
-
-            <!-- Poles -->
-            <line x1="95" y1="185" x2="95" y2="235"
-                  stroke="#e5e7eb" stroke-width="5"/>
-            <line x1="325" y1="185" x2="325" y2="235"
-                  stroke="#e5e7eb" stroke-width="5"/>
-
+            <!-- Sparkle line -->
+            <line x1="160" y1="90" x2="260" y2="170"
+                  stroke="rgba(255,255,255,0.7)"
+                  stroke-width="2"
+                  class="sparkle"/>
         </svg>
 
-        <!-- LOGO TEXT -->
         <div class="logo-text">
             <h1>PLATINUM SUPPLIERS</h1>
             <p>WEDDING TENT & EVENT SUPPLIERS</p>
@@ -149,34 +149,32 @@ footer {
     </div>
 </div>
 
-<!-- MAIN CONTENT -->
+<!-- CONTENT -->
 <div id="content">
 
-    <!-- ABOUT -->
     <div class="section">
         <h2>About Us</h2>
         <p>
-            Platinum Suppliers is a distinguished wedding tent and event setup service,
-            serving Vijayawada with elegance, precision, and reliability.
-            Backed by our legacy brand
+            Platinum Suppliers is a refined wedding tent and event setup service,
+            serving Vijayawada with discretion, craftsmanship, and enduring reliability.
+            The brand operates under the legacy of
             <strong>KARIMULLA TENT HOUSE SUPPLIERS AND CATERING</strong>,
-            established in 1984, we represent decades of refined craftsmanship
-            and trusted excellence.
+            established in 1984.
         </p>
         <p>
-            Every structure we create reflects balance, strength, and understated luxury,
-            designed to elevate celebrations with a calm and premium presence.
+            Our work reflects balance and structural integrity, paired with a restrained
+            sense of luxury. Each installation is designed to complement the occasion,
+            never overpower it.
         </p>
     </div>
 
-    <!-- TENT SETUP -->
     <div class="section">
         <h2>Our Tent Setup</h2>
         <p>
-            Our tent structures are thoughtfully engineered for durability,
-            visual harmony, and flawless presentation.
-            From intimate gatherings to grand wedding receptions,
-            each setup is executed with precision and premium materials.
+            We design and construct durable, weather-resistant tent structures
+            for weddings, receptions, and large ceremonial gatherings.
+            Every setup is executed with precise alignment, premium materials,
+            and disciplined attention to detail.
         </p>
 
         <div class="gallery">
@@ -189,22 +187,21 @@ footer {
         </div>
     </div>
 
-    <!-- CONTACT -->
     <div class="section">
         <h2>Contact</h2>
         <p>
-            📍 17-24-30, Manchalavari Street, Pezzonipet,<br>
+            17-24-30, Manchalavari Street, Pezzonipet<br>
             Vijayawada, Andhra Pradesh – 520003
         </p>
         <p>
-            📞 +91 95699 33366
+            +91 95699 33366
         </p>
     </div>
 
 </div>
 
 <footer>
-    © Platinum Suppliers · Powered by KARIMULLA TENT HOUSE SUPPLIERS AND CATERING · Since 1984
+    © Platinum Suppliers · Since 1984
 </footer>
 
 <script>
